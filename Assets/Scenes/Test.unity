@@ -589,6 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 1675411116}
+  _playerAnimator: {fileID: 1675411118}
   _moveSpeed: 5
 --- !u!95 &1675411118
 Animator:
