@@ -4,9 +4,21 @@ namespace DragonspiritGames
 {
     public class Player : MonoBehaviour
     {
+        public static Player Instance;
+
         [SerializeField] Rigidbody2D _rigidbody;
         [SerializeField] Animator _playerAnimator;
         [SerializeField] float _moveSpeed;
+
+        void Awake()
+        {
+            if (Instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            Instance = this;
+        }
 
         void Start()
         {
